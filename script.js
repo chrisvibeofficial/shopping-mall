@@ -1,9 +1,11 @@
 const express = require('express');
 const port = 4190;
-const sequelize = require('./database/sequelize')
+const sequelize = require('./database/sequelize');
+const userRouter = require('./router/userinfoRouter');
 
 const app = express();
 app.use(express.json());
+app.use(userRouter)
 
 
 const server = async () => {
